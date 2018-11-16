@@ -80,7 +80,7 @@ For comparison with the SE result, *AMPR_lasso_track.m* returns the AMPR message
 For the usage of these codes, type ``help SE_AMPR`` and ``help AMPR_lasso_track``, respectively.
 
 Another utility code is *pathwiseSS_AMPR.m*. This computes the so-called stability path,
-positive probability of covariate coefficient against the regularization parameter lambda,
+positive probability of covariate coefficient against the regularization parameter *lambda*,
 by using AMPR. The stability path provides useful information for variable selection.
 Type ``help pathwiseSS_AMPR`` for details.
 
