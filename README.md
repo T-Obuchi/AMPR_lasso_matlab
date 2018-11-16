@@ -21,56 +21,56 @@ and the positive probability of the estimator (probability such that the estimat
      fit = AMPR_lasso(Y,X,lambda,w,p_w,tau,[],[],[],[],[])   )
 ```
 Inputs:
-- *Y*         Response vector (M dimensional vector).
+- *Y*:         Response vector (M dimensional vector).
 
-- *X*         Matrix of covariates (M*N dimensional matrix).
+- *X*:         Matrix of covariates (M*N dimensional matrix).
 
-- *lambda*    l1 regularizaiton coefficient.   
+- *lambda*:    l1 regularizaiton coefficient.   
 
-- *w*         Reweighting parameter to the regularization coefficients used in stability selection.
-              Default value is *w=1* corresponding to the case of the non-randomized penalty.
-              A recommended value for stability selection is *w=0.5*.
+- *w*:         Reweighting parameter to the regularization coefficients used in stability selection.
+               Default value is *w=1* corresponding to the case of the non-randomized penalty.
+               A recommended value for stability selection is *w=0.5*.
 
-- *p_w*       Fraction of randomization of the regularization coefficients used in stability selection.
-              Default value is *p_w=0* corresponding to the case of the non-randomized penalty.
-              A recommended value for stability selection is *p_w=0.5*.
+- *p_w*:       Fraction of randomization of the regularization coefficients used in stability selection.
+               Default value is *p_w=0* corresponding to the case of the non-randomized penalty.
+               A recommended value for stability selection is *p_w=0.5*.
 
-- *tau*       Ratio of the size of bootstrap sample to the size of the original dataset.
-              Default value is *tau=1* corresponding to the Bootstrap method's convention.
-              A recommended value for stability selection is *tau=0.5*.
+- *tau*:       Ratio of the size of bootstrap sample to the size of the original dataset.
+               Default value is *tau=1* corresponding to the Bootstrap method's convention.
+               A recommended value for stability selection is *tau=0.5*.
 
-- *beta_in*   Initial estimate of mean value of covariates' coefficients (N dimensional vector).
-              Not necessarily needed (but better to be appropriately given for faster convergence).
+- *beta_in*:   Initial estimate of mean value of covariates' coefficients (N dimensional vector).
+               Not necessarily needed (but better to be appropriately given for faster convergence).
 
-- *chi_in*    Initial estimate of rescaled intra-sample variance of covariates' coefficients (N dimensional vector).
-              Not necessarily needed (but better to be appropriately given for faster convergence).
+- *chi_in*:    Initial estimate of rescaled intra-sample variance of covariates' coefficients (N dimensional vector).
+               Not necessarily needed (but better to be appropriately given for faster convergence).
 
-- *W_in*      Initial estimate of variance of covariates' coefficients (N dimensional vector).
-              Not necessarily needed (but better to be appropriately given for faster convergence).
+- *W_in*:      Initial estimate of variance of covariates' coefficients (N dimensional vector).
+               Not necessarily needed (but better to be appropriately given for faster convergence).
 
-- *gamma_min* Minimum damping factor. (Not necessarily needed, default value is 1)
+- *gamma_min*: Minimum damping factor. (Not necessarily needed, default value is 1)
 
-- *gamma_max* Maximum damping factor. (Not necessarily needed, default value is 1)
+- *gamma_max*: Maximum damping factor. (Not necessarily needed, default value is 1)
 
 Outputs:
-- *fit*       A structure.
+- *fit*:       A structure.
 
-- *fit.beta*  Mean value of covariates' coefficients (N dimensional vector).
+- *fit.beta*:  Mean value of covariates' coefficients (N dimensional vector).
 
-- *fit.chi*   Rescaled intra-sample variance of covariates' coefficients (N dimensional vector).
+- *fit.chi*:   Rescaled intra-sample variance of covariates' coefficients (N dimensional vector).
 
-- *fit.W*     Variance of covariates' coefficients (N dimensional vector).
+- *fit.W*:     Variance of covariates' coefficients (N dimensional vector).
 
-- *fit.Pi*    Positive probabilities of covariates' coefficients (N dimensional vector).
-              (Probabilities such that covariates' coefficients take non-zero values.)
+- *fit.Pi*:    Positive probabilities of covariates' coefficients (N dimensional vector).
+               (Probabilities such that covariates' coefficients take non-zero values.)
 
-- *fit.A, fit.B, fit.C*
-              Parameters (N dimensional vectors) characterizing
-              the probability distributions of covariates' coefficients (see [1] for details).
+- *fit.A, fit.B, fit.C*:
+               Parameters (N dimensional vectors) characterizing
+               the probability distributions of covariates' coefficients (see [1] for details).
 
-- *fit.count* Iteration steps until convergence.
+- *fit.count*: Iteration steps until convergence.
 
-- *fit.flag*  flag for checking convergence. (0: converged, 1: not converged.).
+- *fit.flag*:  flag for checking convergence. (0: converged, 1: not converged.).
 
 For more details, type help AMPR_lasso.
 
