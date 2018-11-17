@@ -77,6 +77,9 @@ For more details, type help AMPR_lasso.
 As other related codes, *SE_AMPR.m* solves state evolution (SE) equations associated with AMPR
 and returns dynamical behavior of macroscopic quantities up to MAXIT(=30 in default) steps.
 For comparison with the SE result, *AMPR_lasso_track.m* returns the AMPR messages of the first MAXIT(=30 in default) steps.
+In SE_AMPR.m, the true parameter *beta_0* is assumed to be Bernoulli-Gaussian whose non-zero component density is *rho_0* 
+and the Gaussian's mean and variance are assumed to be zero and *sigmaB2*. 
+These parameters *rho_0 and *sigmaB2* are required as arguments. 
 For the usage of these codes, type ``help SE_AMPR`` and ``help AMPR_lasso_track``, respectively.
 
 Another utility code is *pathwiseSS_AMPR.m*. This computes the so-called stability path,
