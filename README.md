@@ -100,7 +100,6 @@ glmnet (https://web.stanford.edu/~hastie/glmnet_matlab/) is required to solve La
 
 # REFERENCE
 [1] Tomoyuki Obuchi and Yoshiyuki Kabashima: Semi-analytic resampling in Lasso, arXiv:1802.10254.
-Tomoyuki Obuchi and Yoshiyuki Kabashima: "Accelerating Cross-Validation in Multinomial Logistic Regression with l1-Regularization", arXiv: 1711.05420
 
 [2] Nicolai Meinshausen and Peter Buhlmann: Stability selection,
 Journal of the Royal Statistical Society: Series B (Statistical Methodology), 72(4):417--473, 2010.
