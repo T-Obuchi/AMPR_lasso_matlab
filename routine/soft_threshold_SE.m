@@ -1,4 +1,4 @@
-function [out]=soft_threshold(A,B,lambda)
+function [out]=soft_threshold_SE(A,B,lambda)
 Llam=length(lambda);
 sB=size(B);
 for ilam=1:Llam
