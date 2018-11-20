@@ -1,4 +1,4 @@
-function [out]=mysoft_th(A,B,lambda)
+function [out]=soft_threashold_AMPR(A,B,lambda)
 Llam=length(lambda);
 LB=length(B);
 out=zeros(LB,Llam);
