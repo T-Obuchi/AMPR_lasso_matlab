@@ -160,20 +160,18 @@ S_lam=lambda*[1/w,1];          % Set of lambda
 P_lam=[p_w,1-p_w];             % Measure on set of lambda
 
 % Initial condition
-f0=zeros(M,1);
 f1=zeros(M,1);
 f2=zeros(M,1);
 chi_mu=X2*chi_in;
 W_mu=X2*W_in;
 for mu=1:M
-    f0(mu)=Pc'*(  1./(1+c*chi_mu(mu))     );
     f1(mu)=Pc'*(  c./(1+c*chi_mu(mu))     );
     f2(mu)=Pc'*( (c./(1+c*chi_mu(mu))).^2 );        
 end
 beta=beta_in;
 W=W_in;
 chi=chi_in;
-a=(f1.*(Y-X*beta))./f0;
+a=f1.*(Y-X*beta);
 
 % AMPR main loop
 ERR=100;
