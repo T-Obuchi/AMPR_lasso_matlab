@@ -177,7 +177,7 @@ a=f1.*(Y-X*beta);
 ERR=100;
 MAXIT=10000;
 gamma=gamma_min;   % Damping factor
-count=1;
+iter=1;
 while ERR>10^(-6)
     beta_pre=beta;
     W_pre=W;
@@ -208,17 +208,17 @@ while ERR>10^(-6)
     ERR=norm(beta-beta_pre)/norm(beta)+norm(W-W_pre)/norm(W);
 
     % Forced termination
-    if count >= MAXIT
+    if iter >= MAXIT
         warning(['AMPR did not converge in MAXIT=',num2str(MAXIT),'. The result might be inaccurate.']);
         wflag=1;
         break;
     else
         wflag=0;
-        count=count+1;
+        iter=iter+1;
     end
     
     % Damping factor tuning
-    gamma=gamma_max*(1-1/count^(0.1))+gamma_min/count^(0.1);
+    gamma=gamma_max*(1-1/iter^(0.1))+gamma_min/iter^(0.1);
 end
 
 % Positive probabilities
@@ -235,7 +235,7 @@ fit.Pi=P_pos;
 fit.A=A;
 fit.B=B;
 fit.C=C;
-fit.count=count;
+fit.count=iter;
 fit.flag=wflag;
 
 end

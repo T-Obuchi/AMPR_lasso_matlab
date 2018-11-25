@@ -173,7 +173,7 @@ fit.W(:,1)=W_in;
 % AMPR main loop
 ERR=100;
 gamma=1;    % gamma=1: No damping
-for count=2:MAXIT
+for iter=2:MAXIT
     beta_pre=beta;
     W_pre=W;
     
@@ -209,13 +209,13 @@ for count=2:MAXIT
     ERR=norm(beta-beta_pre)/norm(beta)+norm(W-W_pre)/norm(W);
 
     % Save
-    fit.beta(:,count)=beta;
-    fit.chi(:,count)=chi;
-    fit.W(:,count)=W;
-    fit.Pi(:,count)=P_pos;
-    fit.A(:,count)=A;
-    fit.B(:,count)=B;
-    fit.C(:,count)=C;
+    fit.beta(:,iter)=beta;
+    fit.chi(:,iter)=chi;
+    fit.W(:,iter)=W;
+    fit.Pi(:,iter)=P_pos;
+    fit.A(:,iter)=A;
+    fit.B(:,iter)=B;
+    fit.C(:,iter)=C;
     
 end
 
