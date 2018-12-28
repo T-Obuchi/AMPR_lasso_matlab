@@ -116,7 +116,7 @@ end
 if gamma_max < gamma_min
     gamma_max=gamma_min;
 end
-lambda=sort(lambda,1); % Sort in descending order
+lambda=sort(lambda,'descend'); % Sort in descending order
 
 % Initial condition
 beta=zeros(N,1);

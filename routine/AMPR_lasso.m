@@ -205,7 +205,9 @@ while ERR>10^(-6)
     end
     
     % Error monitoring
-    ERR=norm(beta-beta_pre)/norm(beta)+norm(W-W_pre)/norm(W);
+    NR_beta=max(norm(beta),1);
+    NR_W=max(norm(W),1);
+    ERR=norm(beta-beta_pre)/NR_beta+norm(W-W_pre)/NR_W;
 
     % Forced termination
     if iter >= MAXIT
